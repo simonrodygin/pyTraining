@@ -1,5 +1,5 @@
-import User
-import Credentials
+from user import User
+from credentials import Credentials
 
 class Student(User):
     student_amount = 0
@@ -7,7 +7,8 @@ class Student(User):
     average_grade = 0
     
     def __init__(self, name: str, credentials: Credentials):
-        super(Student, self).__init__(name, credentials)
+        super().__init__(name, credentials)
+        Student.student_amount += 1
         self.knowledge = 0
         self.grades = []
         self.average_grade = 0
