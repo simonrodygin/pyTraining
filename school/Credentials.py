@@ -1,4 +1,6 @@
-class Credentials():
-    def __init__(self, login: str, password: str):
-        self.login = login
-        self.password = password
+from dataclasses import dataclass
+
+@dataclass
+class Credentials:
+    login: str
+    password: str
